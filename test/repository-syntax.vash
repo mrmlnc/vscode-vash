@@ -1,0 +1,67 @@
+<p>How are you @model.name? Today is a sunny day on the planet Gunsmoke.</p>
+
+<ul class="@(model.active ? 'highlight' : '')">
+    @model.forEach(function(m) {
+        <li>@m.name</li>
+    })
+</ul>
+
+<text>@@test</text>
+
+// model = { what: 'hello!' }
+<p>@what</p>
+
+<p>@model.what</p>
+
+<p>@model.what().who[2]('are you sure')('yes, it\'s ok')( model.complex ? 'FULL POWER' : '' )</p>
+
+// model = ['a', 'b']
+@model.forEach(function(item) {
+    <li>@item</li>
+})
+
+// model = { description: 'living' }
+<p>Plants are @model.description.</p>
+
+// model = { formName: 'addresses' }
+<input type="text" name="@model.formName[]" />
+
+<a href="mailto:vash@planetgunsmoke.com">Email Me</a>
+
+<p>@(model.what)</p>
+
+// model = { hasIceCream: true }
+<p class="@( model.hasIceCream ? 'ice-cream' : '')">Ice Cream</p>
+
+@(function(type){ return type + ' cream'; }('banana'))
+
+@{ var rideOn = 'shooting star'; }
+@{
+    var total = model.price + model.tax;
+}
+
+<p>Your total is: $@total</p>
+
+@{ <p>This works!</p> }
+
+// model = { type: 'banana' }
+@if(model.type){
+    <p>I'm a @model.type!</p>
+} else if(model.name){
+    <p>My name is @model.name.</p>
+} else {
+    <p>I DON'T KNOW WHO OR WHAT I AM...</p>
+}
+
+// model = 1
+@switch(model){case 1:<p></p>break;case 2:<b></b>break;}
+
+@* I am a comment that extends
+over multiple lines *@
+<p>BANANA!</p>
+
+// model = { what: '<img />' }
+<p>@model.what</p>
+
+// model = { what: '<img />' }
+<p>@html.raw(model.what)</p>

@@ -1,0 +1,39 @@
+{
+  "name": "vscode-vash",
+  "displayName": "Vash syntax",
+  "description": "Vash syntax for VS Code.",
+  "preview": true,
+  "version": "0.1.0",
+  "publisher": "mrmlnc",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.3.0"
+  },
+  "icon": "icon.png",
+  "homepage": "https://github.com/mrmlnc/vscode-vash/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrmlnc/vscode-vash"
+  },
+  "keywords": [
+    "vash",
+    "syntax",
+    "highlight"
+  ],
+  "categories": [
+    "Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "vash",
+      "aliases": ["Vash", "vash"],
+      "extensions": [".vash"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "vash",
+      "scopeName": "text.html.vash",
+      "path": "./syntaxes/vash.json"
+    }]
+  }
+}

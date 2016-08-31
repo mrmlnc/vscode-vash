@@ -1,0 +1,54 @@
+{
+  "name": "Vash",
+  "scopeName": "text.html.vash",
+  "fileTypes": [
+    "vash"
+  ],
+  "patterns": [
+    {
+      "name": "string.regexp",
+      "match": "@@"
+    },
+    {
+      "name": "comment.block.vash",
+      "begin": "(@\\*)",
+      "end": "(\\*@)"
+    },
+    {
+      "name": "comment.line.vash",
+      "match": "(//).*$\\n?"
+    },
+    {
+      "name": "keyword.control.vash",
+      "match": "(?<!\\.)\\b(break|catch|continue|do|else|finally|for|if|switch|try|while|with|case|default)\\b"
+    },
+    {
+      "begin": "(@)",
+      "beginCaptures": {
+        "1": { "name": "keyword.control.vash" }
+      },
+      "patterns": [
+        {
+          "begin": "(?<=@)\\{",
+          "patterns": [
+            { "include": "source.js" }
+          ],
+          "end": "\\}"
+        },
+        {
+          "begin": "\\(",
+          "patterns": [
+            { "include": "source.js" }
+          ],
+          "end": "\\)|\\n"
+        },
+        {
+          "name": "keyword.control.vash",
+          "match": "(?<=@)([a-zA-Z0-9]+)"
+        }
+      ],
+      "end": "(?=(?:forEach|<|\\)|\n))"
+    },
+    { "include": "text.html.basic" }
+  ]
+}

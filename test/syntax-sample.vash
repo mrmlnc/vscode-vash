@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewBag.Title - Title</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+
+    // model = { type: 'banana' }
+    @if(model.type){
+        <p>I'm a @model.type!</p>
+    } else if(model.name){
+        <p>My name is @model.name.</p>
+    } else {
+        <p>I DON'T KNOW WHO OR WHAT I AM...</p>
+    }
+
+    <div class="container">
+        @HTML.ActionLink("Application name", "Index", "Home", new { area = "" })
+    </div>
+
+    <div class="container">
+        <p>@DateTime.Now.Year - Test</p>
+
+        @* I am a comment that extends
+        over multiple lines *@
+
+        @{
+          function testJavaScriptEmbeddedSyntax() {
+            return true;
+          }
+        }
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
