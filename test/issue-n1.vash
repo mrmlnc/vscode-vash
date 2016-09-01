@@ -1,0 +1,10 @@
+@html.extend("layout", function(model) {
+  @html.block("body", function(model) {
+    <div id="my-id" class="my-class">
+      @html.include('SOME_PARTIAL', {
+        content: model.X,
+        'test': 123
+      })
+    </div>
+  })
+})
