@@ -35,5 +35,24 @@
       "scopeName": "text.html.vash",
       "path": "./syntaxes/vash.json"
     }]
+  },
+  "devDependencies": {
+    "xo": "^0.16.0",
+    "vscode": "^0.11.17"
+  },
+  "xo": {
+    "space": true,
+    "rules": {
+      "no-var": 2,
+      "prefer-const": [2, { "destructuring": "all" }],
+      "space-before-function-paren": [2, "never"],
+      "babel/arrow-parens": [2, "always"],
+      "babel/object-curly-spacing": [2, "always"],
+      "babel/generator-star-spacing": [2, "after"],
+      "xo/filename-case": ["error", { "case": "camelCase" }]
+    },
+    "envs": [
+      "node"
+    ]
   }
 }
