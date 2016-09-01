@@ -25,13 +25,12 @@
         {
           "begin": "\\(",
           "patterns": [
-            { "include": "source.js" },
-    { "include": "text.html.basic" }
+            { "include": "source.js" }
           ],
           "end": "(?=(?:\\)|\\n|function))"
         }
       ],
-      "end": "(?=(?:<|\\)|\\n))"
+      "end": "(?=(?:<|\\)|(?<!,)\\n))"
     },
     "escape-symbol": {
       "name": "string.regexp",
@@ -83,7 +82,7 @@
           "end": "\\)"
         }
       ],
-      "end": "(\\s|\\{\\n)"
+      "end": "(\\s|\\{|\\n)"
     },
     "javascript-parameter-name": {
       "name": "parameter.name.js",
