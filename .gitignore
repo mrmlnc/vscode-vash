@@ -3,10 +3,6 @@ logs/
 *.log
 npm-debug.log*
 
-# IDE & editors
-.idea
-.vscode
-
 # Dependency directory
 node_modules/
 
