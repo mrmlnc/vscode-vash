@@ -23,6 +23,10 @@
   "categories": [
     "Languages"
   ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage:vash"
+  ],
   "contributes": {
     "languages": [{
       "id": "vash",

@@ -1,0 +1,52 @@
+[
+  {
+    "label": "raw",
+    "detail": "",
+    "documentation": "@html.raw(\"<text>\")"
+  },
+  {
+    "label": "escape",
+    "detail": "",
+    "documentation": "@html.escape(\"<text>\")"
+  },
+  {
+    "label": "tplcache",
+    "detail": "",
+    "documentation": ""
+  },
+  {
+    "label": "extend",
+    "detail": "",
+    "documentation": "@html.extend(parent_path, callback)"
+  },
+  {
+    "label": "block",
+    "detail": "",
+    "documentation": "@html.block(name, callback)"
+  },
+  {
+    "label": "append",
+    "detail": "",
+    "documentation": "@html.append(name, callback)"
+  },
+  {
+    "label": "prepend",
+    "detail": "",
+    "documentation": "@html.prepend(name, callback)"
+  },
+  {
+    "label": "include",
+    "detail": "",
+    "documentation": "@html.include(name, model)"
+  },
+  {
+    "label": "highlight",
+    "detail": "",
+    "documentation": "@html.highlight(language, text)"
+  },
+  {
+    "label": "fn",
+    "detail": "",
+    "documentation": "@html.fn(text)"
+  }
+]
