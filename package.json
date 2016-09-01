@@ -1,7 +1,7 @@
 {
   "name": "vscode-vash",
   "displayName": "Vash syntax",
-  "description": "Vash syntax for VS Code.",
+  "description": "Vash integration for VS Code.",
   "preview": true,
   "version": "0.1.2",
   "publisher": "mrmlnc",
