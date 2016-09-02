@@ -1,6 +1,6 @@
 # vscode-vash
 
-> Vash syntax for VS Code.
+> [Vash](https://github.com/kirbysayshi/vash) integration for VS Code.
 
 ## Colorization
 
@@ -23,6 +23,7 @@
 
   * Syntax highlight
   * Emmet (VS Code 1.5+)
+  * Intellisense (experimental support)
 
 ### Supported filetypes
 
