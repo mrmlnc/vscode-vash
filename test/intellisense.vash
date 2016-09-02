@@ -44,3 +44,10 @@
 }('banana'))
 
 // (11,1) <-- Should show: html
+
+<ul class="@(model.active ? 'highlight' : '')">
+  @model.forEach(function(m) {
+    // (12,2) <-- Should show: html & m
+
+  })
+</ul>
