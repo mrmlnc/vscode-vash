@@ -1,52 +1,47 @@
 [
   {
     "label": "raw",
-    "detail": "",
+    "detail": "By default, all content that passes from a model to a template is HTML encoded. This method passes content without HTML encoded.",
     "documentation": "@html.raw(\"<text>\")"
   },
   {
     "label": "escape",
-    "detail": "",
+    "detail": "This method passes content with HTML encoded.",
     "documentation": "@html.escape(\"<text>\")"
   },
   {
     "label": "tplcache",
-    "detail": "",
+    "detail": "The tplcache is just that, a place to put a global index of templates. This is used primarily for the more \"view engine\" aspects that Vash provides, as well as a default location for precompiled templates using Vash.",
     "documentation": ""
   },
   {
     "label": "extend",
-    "detail": "",
+    "detail": "Used to inheritance for view templates.",
     "documentation": "@html.extend(parent_path, callback)"
   },
   {
     "label": "block",
-    "detail": "",
+    "detail": "A block is essentially a placeholder within a template that can be overridden via another call to \"vash.helpers.block\", or modified using \"vash.helpers.append\" and \"vash.helpers.prepend\".",
     "documentation": "@html.block(name, callback)"
   },
   {
     "label": "append",
-    "detail": "",
+    "detail": "Is a way to control the content of a block from within an extending template. In this way, it allows templates to invert control over content \"above\" them.",
     "documentation": "@html.append(name, callback)"
   },
   {
     "label": "prepend",
-    "detail": "",
+    "detail": "Behaves nearly the same as \"vash.helpers.append\" except that it places content at the beginning of a block instead of at the end. ",
     "documentation": "@html.prepend(name, callback)"
   },
   {
     "label": "include",
-    "detail": "",
+    "detail": "Used to literally include the contents of another template.",
     "documentation": "@html.include(name, model)"
   },
   {
     "label": "highlight",
-    "detail": "",
-    "documentation": "@html.highlight(language, text)"
-  },
-  {
-    "label": "fn",
-    "detail": "",
-    "documentation": "@html.fn(text)"
+    "detail": "Used to syntax highlighting.",
+    "documentation": "@html.highlight(language, callback)"
   }
 ]
