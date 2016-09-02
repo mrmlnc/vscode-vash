@@ -3,7 +3,7 @@
   "displayName": "Vash syntax",
   "description": "Vash integration for VS Code.",
   "preview": true,
-  "version": "0.1.2",
+  "version": "0.2.0",
   "publisher": "mrmlnc",
   "license": "MIT",
   "engines": {
