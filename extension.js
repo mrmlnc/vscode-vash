@@ -8,7 +8,7 @@ function activate(context) {
   const completionItemProvider = new CompletionProvider();
 
   const completionProviderDisposable = languages
-    .registerCompletionItemProvider('vash', completionItemProvider, '.');
+    .registerCompletionItemProvider('vash', completionItemProvider, '@', '.');
 
   context.subscriptions.push(completionProviderDisposable);
 }

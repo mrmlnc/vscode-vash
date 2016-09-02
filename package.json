@@ -40,8 +40,12 @@
       "path": "./syntaxes/vash.json"
     }]
   },
+  "scripts": {
+    "test": "xo && mocha **/*.spec.js"
+  },
   "devDependencies": {
     "xo": "^0.16.0",
+    "mocha": "^3.0.2",
     "vscode": "^0.11.17"
   },
   "xo": {
@@ -56,7 +60,8 @@
       "xo/filename-case": ["error", { "case": "camelCase" }]
     },
     "envs": [
-      "node"
+      "node",
+      "mocha"
     ]
   }
 }

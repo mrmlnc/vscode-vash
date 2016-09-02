@@ -1,0 +1,46 @@
+@html.extend("layout", function(one) {
+  @html('empty', function() {
+    // (1,2) <-- Should show: html & one
+
+  })
+
+  // (2,2) <-- Should show: html & one
+
+  @html.block("body", function(two) {
+
+    // (3,3) <-- Should show: html & one & two
+
+    <div id="my-id" class="my-class">
+      @html.include('SOME_PARTIAL', {
+        content: model.X,
+        'test': 123
+      })
+    </div>
+  })
+
+  // (4,2) <-- Should show: html & one
+
+})
+
+// (5,1) <-- Should show: html
+
+@html('test', function(three) {
+  // (6,2) <-- Should show: html & three
+
+  @(function(type){ return type + ' cream';
+    // (7,2) <-- Should show: html & three
+
+  }('banana'))
+  // (8,2) <-- Should show: html & three
+
+})
+
+// (9,1) <-- Should show: html
+
+@(function(type){
+  return type + ' cream';
+  // (10,1) <-- Should show: html
+
+}('banana'))
+
+// (11,1) <-- Should show: html
