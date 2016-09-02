@@ -18,7 +18,8 @@
   "keywords": [
     "vash",
     "syntax",
-    "highlight"
+    "highlight",
+    "intellisense"
   ],
   "categories": [
     "Languages"
