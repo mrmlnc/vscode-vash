@@ -11,8 +11,8 @@
   },
   {
     "label": "tplcache",
-    "detail": "The tplcache is just that, a place to put a global index of templates. This is used primarily for the more \"view engine\" aspects that Vash provides, as well as a default location for precompiled templates using Vash.",
-    "documentation": ""
+    "detail": "tplcache can use for set global index for a compiled template. this will initialized when using \"vash.install\", or can initialize manualy. for more see \"vash.install\", \"vash.uninstall\" and \"vash.lookup\"",
+    "documentation": "vash.helpers.tplcache[name_of_precompiled_template]"
   },
   {
     "label": "extend",
