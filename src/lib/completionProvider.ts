@@ -73,7 +73,7 @@ export function provideCompletionItems(document: TextDocument, position: Positio
 
 	const wordLastSymbol = currentWord[currentWord.length - 1];
 	if (['.', ':', '<', '"', '=', '/'].indexOf(wordLastSymbol) !== 0) {
-		const htmlDocument = languageService.parseHTMLDocument(document);
+		const htmlDocument: HTMLDocument = languageService.parseHTMLDocument(document);
 		completion.items = languageService.doComplete(document, position, htmlDocument, options).items;
 	}
 	if (currentWord === '@html.') {

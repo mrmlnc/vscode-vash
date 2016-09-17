@@ -42,7 +42,7 @@
     }]
   },
   "scripts": {
-    "test": "tslint && tsc && mocha out/**/*.spec.js"
+    "test": "tslint src/**/*.ts && tsc && mocha out/**/*.spec.js"
   },
   "devDependencies": {
     "typescript": "^1.8.10",
