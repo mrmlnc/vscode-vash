@@ -5,4 +5,5 @@ lib/**/*.spec.js
 .editorconfig
 .gitignore
 .travis.yml
-jsconfig.json
+tslint.json
+tsconfig.json

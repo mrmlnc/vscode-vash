@@ -3,7 +3,7 @@
   "displayName": "Vash syntax",
   "description": "Vash integration for VS Code.",
   "preview": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "mrmlnc",
   "license": "MIT",
   "engines": {
@@ -24,16 +24,16 @@
   "categories": [
     "Languages"
   ],
-  "main": "./extension.js",
   "activationEvents": [
     "onLanguage:vash"
   ],
+  "main": "./out/client",
   "contributes": {
     "languages": [{
       "id": "vash",
       "aliases": ["Vash", "vash"],
       "extensions": [".vash"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./syntaxes/language-configuration.json"
     }],
     "grammars": [{
       "language": "vash",
@@ -42,27 +42,17 @@
     }]
   },
   "scripts": {
-    "test": "xo && mocha **/*.spec.js"
+    "test": "tslint && tsc && mocha out/**/*.spec.js"
   },
   "devDependencies": {
-    "xo": "^0.16.0",
+    "typescript": "^1.8.10",
+    "tslint": "^3.15.1",
     "mocha": "^3.0.2",
     "vscode": "^0.11.17"
   },
-  "xo": {
-    "space": true,
-    "rules": {
-      "no-var": 2,
-      "prefer-const": [2, { "destructuring": "all" }],
-      "space-before-function-paren": [2, "never"],
-      "babel/arrow-parens": [2, "always"],
-      "babel/object-curly-spacing": [2, "always"],
-      "babel/generator-star-spacing": [2, "after"],
-      "xo/filename-case": ["error", { "case": "camelCase" }]
-    },
-    "envs": [
-      "node",
-      "mocha"
-    ]
+  "dependencies": {
+    "vscode-languageclient": "2.5.0",
+    "vscode-languageserver": "2.5.0",
+    "vscode-html-languageservice": "1.0.0-next.1"
   }
 }

@@ -1,98 +1,98 @@
 {
-  "name": "Vash",
-  "scopeName": "text.html.vash",
-  "uuid": "dd0d03da-3c4e-463d-9468-240b07f8b41d",
-  "fileTypes": [
-    "vash"
-  ],
-  "patterns": [
-    { "include": "#escape-symbol" },
-    { "include": "#comment-line" },
-    { "include": "#comment-block" },
-    { "include": "#embedded-javascript" },
-    { "include": "#control-statement" },
-    { "include": "#embedded-vash" },
-    { "include": "text.html.basic" }
-  ],
-  "repository": {
-    "embedded-vash": {
-      "begin": "(@)",
-      "beginCaptures": {
-        "1": { "name": "keyword.control.vash" }
-      },
-      "patterns": [
-        { "include": "#keyword" },
-        { "include": "#javascript-function" },
-        {
-          "begin": "\\(",
-          "patterns": [
-            { "include": "source.js" }
-          ],
-          "end": "(?=(?:\\)|\\n|function))"
-        }
-      ],
-      "end": "(?=(?:<|\\)|(?<!,)\\n))"
-    },
-    "escape-symbol": {
-      "name": "string.regexp",
-      "match": "@@"
-    },
-    "comment-block": {
-      "name": "comment.block.vash",
-      "begin": "(@\\*)",
-      "end": "(\\*@)"
-    },
-    "comment-line": {
-      "name": "comment.line.vash",
-      "match": "(//).*$\\n?"
-    },
-    "embedded-javascript": {
-      "begin": "(@)(\\{|\\()",
-      "beginCaptures": {
-        "1": { "name": "keyword.control.vash" },
-        "2": { "name": "source.js.embedded.vash" }
-      },
-      "patterns": [
-        { "include": "source.js" }
-      ],
-      "end": "(?=(?:\\}|\\)))"
-    },
-    "keyword": {
-      "name": "keyword.control.vash",
-      "match": "(?<=@)([a-zA-Z0-9]+)(?:\\s?)"
-    },
-    "control-statement": {
-      "name": "keyword.control.vash",
-      "match": "(?<!\\.)\\b(break|catch|continue|do|else|finally|for|if|switch|try|while|with|case|default)\\b"
-    },
-    "javascript-function": {
-      "name": "meta.function.js",
-      "begin": "\\b(?:(export)\\s+)?(?:(async)\\s+)?(function\\b)(?:\\s+([a-zA-Z_$][\\w$]*))?\\s*",
-      "beginCaptures": {
-        "1": { "name": "storage.type.js" },
-        "2": { "name": "storage.modifier.js" },
-        "3": { "name": "storage.type.function.js" },
-        "4": { "name": "entity.name.function.js" }
-      },
-      "patterns": [
-        {
-          "begin": "\\(",
-          "patterns": [
-            { "include": "#javascript-parameter-name" }
-          ],
-          "end": "\\)"
-        }
-      ],
-      "end": "(\\s|\\{|\\n)"
-    },
-    "javascript-parameter-name": {
-      "name": "parameter.name.js",
-      "match": "(\\.\\.\\.)?\\s*([a-zA-Z_$][\\w$]*)\\s*(\\??)",
-      "captures": {
-        "1": { "name": "keyword.others.js" },
-        "2": { "name": "variable.parameter.js" },
-        "3": { "name": "keyword.others.js" }
-      }
-    }
-  }
+	"name": "Vash",
+	"scopeName": "text.html.vash",
+	"uuid": "dd0d03da-3c4e-463d-9468-240b07f8b41d",
+	"fileTypes": [
+		"vash"
+	],
+	"patterns": [
+		{ "include": "#escape-symbol" },
+		{ "include": "#comment-line" },
+		{ "include": "#comment-block" },
+		{ "include": "#embedded-javascript" },
+		{ "include": "#control-statement" },
+		{ "include": "#embedded-vash" },
+		{ "include": "text.html.basic" }
+	],
+	"repository": {
+		"embedded-vash": {
+		"begin": "(@)",
+		"beginCaptures": {
+			"1": { "name": "keyword.control.vash" }
+		},
+		"patterns": [
+			{ "include": "#keyword" },
+			{ "include": "#javascript-function" },
+			{
+			"begin": "\\(",
+			"patterns": [
+				{ "include": "source.js" }
+			],
+			"end": "(?=(?:\\)|\\n|function))"
+			}
+		],
+		"end": "(?=(?:<|\\)|(?<!,)\\n))"
+		},
+		"escape-symbol": {
+		"name": "string.regexp",
+		"match": "@@"
+		},
+		"comment-block": {
+		"name": "comment.block.vash",
+		"begin": "(@\\*)",
+		"end": "(\\*@)"
+		},
+		"comment-line": {
+		"name": "comment.line.vash",
+		"match": "(//).*$\\n?"
+		},
+		"embedded-javascript": {
+		"begin": "(@)(\\{|\\()",
+		"beginCaptures": {
+			"1": { "name": "keyword.control.vash" },
+			"2": { "name": "source.js.embedded.vash" }
+		},
+		"patterns": [
+			{ "include": "source.js" }
+		],
+		"end": "(?=(?:\\}|\\)))"
+		},
+		"keyword": {
+		"name": "keyword.control.vash",
+		"match": "(?<=@)([a-zA-Z0-9]+)(?:\\s?)"
+		},
+		"control-statement": {
+		"name": "keyword.control.vash",
+		"match": "(?<!\\.)\\b(break|catch|continue|do|else|finally|for|if|switch|try|while|with|case|default)\\b"
+		},
+		"javascript-function": {
+		"name": "meta.function.js",
+		"begin": "\\b(?:(export)\\s+)?(?:(async)\\s+)?(function\\b)(?:\\s+([a-zA-Z_$][\\w$]*))?\\s*",
+		"beginCaptures": {
+			"1": { "name": "storage.type.js" },
+			"2": { "name": "storage.modifier.js" },
+			"3": { "name": "storage.type.function.js" },
+			"4": { "name": "entity.name.function.js" }
+		},
+		"patterns": [
+			{
+			"begin": "\\(",
+			"patterns": [
+				{ "include": "#javascript-parameter-name" }
+			],
+			"end": "\\)"
+			}
+		],
+		"end": "(\\s|\\{|\\n)"
+		},
+		"javascript-parameter-name": {
+		"name": "parameter.name.js",
+		"match": "(\\.\\.\\.)?\\s*([a-zA-Z_$][\\w$]*)\\s*(\\??)",
+		"captures": {
+			"1": { "name": "keyword.others.js" },
+			"2": { "name": "variable.parameter.js" },
+			"3": { "name": "keyword.others.js" }
+		}
+		}
+	}
 }
