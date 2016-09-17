@@ -2,10 +2,6 @@
 
 > [Vash](https://github.com/kirbysayshi/vash) integration for VS Code.
 
-## Colorization
-
-![Vash syntax in VS Code](https://cloud.githubusercontent.com/assets/7034281/18126485/041e90a8-6f84-11e6-82b9-d2c259574f94.png)
-
 ## Usage
 
 ### Install the extension in VS Code
@@ -21,9 +17,21 @@
 
 ### Supported features
 
-  * Syntax highlight
-  * Emmet (VS Code 1.5+)
-  * Intellisense (experimental support)
+## Syntax highlighting
+
+![Vash syntax highlighting](https://cloud.githubusercontent.com/assets/7034281/18608973/99fc9eca-7cff-11e6-9149-2ae2a2dd77c2.png)
+
+## Emmet
+
+![Vash syntax and Emmet](https://cloud.githubusercontent.com/assets/7034281/18608989/c6fcb248-7cff-11e6-9532-d6d5d7f89228.gif)
+
+## Intellisense for Vash code
+
+![Vash intellisense](https://cloud.githubusercontent.com/assets/7034281/18609009/1c0d9b1c-7d00-11e6-96ad-d55b8ded506a.gif)
+
+## Intellisense for HTML code
+
+![HTML intellisense](https://cloud.githubusercontent.com/assets/7034281/18609017/41b8d70a-7d00-11e6-9407-c7c66a84f770.gif)
 
 ### Supported filetypes
 
