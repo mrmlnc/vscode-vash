@@ -2,7 +2,6 @@
   "name": "vscode-vash",
   "displayName": "Vash syntax",
   "description": "Vash integration for VS Code.",
-  "preview": true,
   "version": "0.3.0",
   "publisher": "mrmlnc",
   "license": "MIT",
