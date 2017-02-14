@@ -3,7 +3,7 @@
 import {
 	createConnection, IConnection,
 	IPCMessageReader, IPCMessageWriter,
-	TextDocuments, TextDocument, InitializeParams, InitializeResult
+	TextDocuments, TextDocument, InitializeResult
 } from 'vscode-languageserver';
 
 import {
@@ -20,16 +20,16 @@ console.log = connection.console.log.bind(connection.console);
 console.error = connection.console.error.bind(connection.console);
 
 // Create a simple text document manager. The text document manager
-// supports full document sync only
+// _supports full document sync only
 const documents: TextDocuments = new TextDocuments();
 
 // Make the text document manager listen on the connection
-// for open, change and close text document events
+// _for open, change and close text document events
 documents.listen(connection);
 
 // After the server has started the client sends an initilize request. The server receives
-// in the passed params the rootPath of the workspace plus the client capabilites
-connection.onInitialize((params: InitializeParams): InitializeResult => {
+// _in the passed params the rootPath of the workspace plus the client capabilites
+connection.onInitialize((): InitializeResult => {
 	return {
 		capabilities: {
 			textDocumentSync: documents.syncKind,
@@ -42,8 +42,6 @@ connection.onInitialize((params: InitializeParams): InitializeResult => {
 		}
 	};
 });
-
-
 
 // The settings interface describes the server relevant settings part
 interface Settings {

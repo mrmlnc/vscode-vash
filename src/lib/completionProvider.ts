@@ -16,7 +16,7 @@ import {
 
 import { languageFacts, lookupFunctionParameters } from './helpers';
 
-// create the HTML language service
+// Create the HTML language service
 const languageService = getLanguageService();
 
 function makeContextCompletionItems(document: TextDocument, position: Position): CompletionItem[] {
@@ -66,7 +66,7 @@ export function provideCompletionItems(document: TextDocument, position: Positio
 	const line = textDocument[pos.line];
 	const currentWord = line.slice(0, pos.character).trim();
 
-	let completion: CompletionList = {
+	const completion: CompletionList = {
 		isIncomplete: false,
 		items: []
 	};
