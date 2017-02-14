@@ -48,7 +48,7 @@ function makeCompletionItems(): CompletionItem[] {
 	return languageFacts.map((item) => {
 		const completionItem: CompletionItem = {
 			label: item.label,
-			kind: CompletionItemKind.Variable
+			kind: CompletionItemKind.Method
 		};
 
 		Object.keys(item).forEach((key) => {
