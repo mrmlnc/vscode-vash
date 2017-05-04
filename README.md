@@ -1,5 +1,7 @@
 # vscode-vash
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mrmlnc/vscode-vash.svg)](https://greenkeeper.io/)
+
 > [Vash](https://github.com/kirbysayshi/vash) integration for VS Code.
 
 ## Usage
