@@ -37,24 +37,6 @@
 
   * `.vash`
 
-## Contributing
-
-> These simple rules will help me to solve your problem.
-
-  * Check the **Issues** and **Pull requests** sections for duplicates of your question or path.
-  * Please, use GitHub emotions.
-  * If you want create **Issue**:
-    * Specify the version of your editor and used theme.
-    * Detailed description of your problem:
-      * Description
-      * Code sample
-      * Screenshot
-  * If you want create **Pull request**:
-    * Fork this repository and clone it to your machine.
-    * Open folder contains this extension in VS Code.
-    * Press <kbd>F5</kbd>.
-    * Make your changes and send a PR.
-
 ## Changelog
 
 See the [Releases section of our GitHub project](https://github.com/mrmlnc/vscode-vash/releases) for changelogs for each release version.
